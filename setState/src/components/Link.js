@@ -1,20 +1,20 @@
-import React from 'react'
+import React from 'react';
 
-const Link = ({ active, children, filter, onLinkClick }) => {
-  if (active) {
-    return <span>{children}</span>
-  }
+const Link = ({active, children, filter, onLinkClick}) => {
+	if (active) {
+		return <span>{children}</span>;
+	}
 
-  return (
-    <a href="#"
-       onClick={e => {
-         e.preventDefault();
-         onLinkClick(filter);
-       }}
-    >
-      {children}
-    </a>
-  )
+	return (
+		<a href="#"
+		onClick={e => {
+		e.preventDefault();
+		onLinkClick(filter);
+		}}
+		>
+			{children}
+		</a>
+	);
 }
 
-export default Link
+export default Link;
