@@ -6,10 +6,3 @@ ReactDOM.render(
 	<App />,
 	document.getElementById('root')
 );
-
-// directory structure, file names
-// where do constants live
-//
-// redux
-// immutable
-// async
