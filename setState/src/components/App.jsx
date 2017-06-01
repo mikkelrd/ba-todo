@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import AddTodo from './AddTodo';
 import TodoList from './TodoList';
 import Footer from './Footer';
-import {filterConstants} from '../constants';
+import {todoConstants} from '../constants';
 import {DUMMY_DATA} from '../config';
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
 		super(props);
 		this.state = {
 			todos: DUMMY_DATA,
-			visibilityFilter: filterConstants.SHOW_ALL,
+			visibilityFilter: todoConstants.SHOW_ALL,
 		};
 		this.addTodo = this.addTodo.bind(this);
 		this.toggleTodo = this.toggleTodo.bind(this);
@@ -19,11 +19,11 @@ class App extends Component {
 
 	getVisibleTodos() {
 		switch (this.state.visibilityFilter) {
-		  case filterConstants.SHOW_ALL:
+		  case todoConstants.SHOW_ALL:
 			return this.state.todos
-		  case filterConstants.SHOW_ACTIVE:
+		  case todoConstants.SHOW_ACTIVE:
 			return this.state.todos.filter(t => !t.completed)
-		  case filterConstants.SHOW_COMPLETED:
+		  case todoConstants.SHOW_COMPLETED:
 			return this.state.todos.filter(t => t.completed)
 		  default:
 			throw new Error('Unknown filter: ' + this.state.visibilityFilter)

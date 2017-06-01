@@ -1,19 +1,19 @@
 import React from 'react';
 import Link from './Link';
-import {filterConstants} from '../constants';
+import {todoConstants} from '../constants';
 
 const links = [
 	{
 		text: ' All, ',
-		filter: filterConstants.SHOW_ALL,
+		filter: todoConstants.SHOW_ALL,
 	},
 	{
 		text: 'Active, ',
-		filter: filterConstants.SHOW_ACTIVE,
+		filter: todoConstants.SHOW_ACTIVE,
 	},
 	{
 		text: 'Completed',
-		filter: filterConstants.SHOW_COMPLETED,
+		filter: todoConstants.SHOW_COMPLETED,
 	},
 ];
 
